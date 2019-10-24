@@ -18,7 +18,6 @@ jobs:
       - name: Create an executable from the "spider" text adventure game
         run: |
           mkdir ~/collect
-          echo ":- initialization(spider::start)." >> $LOGTALKUSER/examples/adventure/spider.lgt
           $LOGTALKHOME/scripts/embedding/gprolog/gprolog_embed_logtalk.sh -c -d ~/collect -l $LOGTALKUSER/examples/adventure/spider.lgt -s $LOGTALKUSER/scripts/embedding/settings-embedding-sample.lgt -p $LOGTALKUSER/paths/paths.pl
           mv ~/collect/logtalk ~/collect/spider
       - name: Upload executable
