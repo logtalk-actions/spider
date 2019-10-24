@@ -20,8 +20,8 @@ jobs:
           mkdir ~/collect
           $LOGTALKHOME/scripts/embedding/gprolog/gprolog_embed_logtalk.sh -c -d ~/collect -l $LOGTALKUSER/examples/adventure/spider.lgt -s $LOGTALKUSER/scripts/embedding/settings-embedding-sample.lgt -p $LOGTALKUSER/paths/paths.pl
           mv ~/collect/logtalk ~/collect/spider
-      - name: Upload generated documentation
+      - name: Upload executable
         uses: actions/upload-artifact@master
         with:
           name: spider
-          path: collect/spider
+          path: ~/collect/spider
