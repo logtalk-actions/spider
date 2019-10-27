@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: spider
-          path: /Users/runner/collect/spider
+          path: ${{ github.home }}/collect/spider
